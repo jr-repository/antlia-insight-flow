@@ -99,26 +99,24 @@ const AppSidebar = () => {
 
   return (
     <Sidebar
-      className={`${!open ? "w-14" : "w-64"} transition-all duration-300 border-r-0`}
+      className={`${!open ? "w-14" : "w-64"} transition-all duration-300 border-r border-white/10 fixed top-0 left-0 h-screen z-40`}
       style={{
-        background: "linear-gradient(180deg, #1e3a8a 0%, #3b82f6 45%, #7c3aed 100%) !important",
-        height: "100vh",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: 50
+        background: "linear-gradient(180deg, #1e3a8a 0%, #3b82f6 45%, #7c3aed 100%) !important"
       }}
     >
       <div className="p-4">
-        <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">A</span>
-          </div>
-          {open && (
-            <div className="text-white">
-              <h2 className="font-bold text-lg">Antlia 4.0</h2>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">A</span>
             </div>
-          )}
+            {open && (
+              <div className="text-white">
+                <h2 className="font-bold text-lg">Antlia 4.0</h2>
+              </div>
+            )}
+          </div>
+          <SidebarTrigger className="text-white hover:bg-white/10 p-1.5 rounded-md transition-colors" />
         </div>
       </div>
 
