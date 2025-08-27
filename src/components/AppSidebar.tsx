@@ -9,7 +9,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
 import { 
@@ -99,10 +98,9 @@ const AppSidebar = () => {
 
   return (
     <Sidebar
-      className={`${!open ? "w-14" : "w-64"} transition-all duration-300 border-r border-white/10 fixed top-0 left-0 h-screen z-40`}
-      style={{
-        background: "linear-gradient(180deg, #1e3a8a 0%, #3b82f6 45%, #7c3aed 100%) !important"
-      }}
+      collapsible="icon"
+      variant="sidebar"
+      className="border-r border-white/10"
     >
       <div className="p-4">
         <div className="flex items-center justify-between">
@@ -116,7 +114,6 @@ const AppSidebar = () => {
               </div>
             )}
           </div>
-          <SidebarTrigger className="text-white hover:bg-white/10 p-1.5 rounded-md transition-colors" />
         </div>
       </div>
 
