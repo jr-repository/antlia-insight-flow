@@ -99,9 +99,14 @@ const AppSidebar = () => {
 
   return (
     <Sidebar
-      className={`${!open ? "w-14" : "w-64"} transition-all duration-300`}
+      className={`${!open ? "w-14" : "w-64"} transition-all duration-300 border-r-0`}
       style={{
-        background: "linear-gradient(180deg, #1e3a8a 0%, #3b82f6 45%, #7c3aed 100%)"
+        background: "linear-gradient(180deg, #1e3a8a 0%, #3b82f6 45%, #7c3aed 100%) !important",
+        height: "100vh",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 50
       }}
     >
       <div className="p-4">
