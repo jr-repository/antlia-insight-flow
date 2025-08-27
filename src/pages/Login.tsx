@@ -83,20 +83,22 @@ const Login = () => {
 
       {/* Right Side - Discover Information */}
       <div className="hidden lg:flex items-center justify-center p-8 bg-gradient-primary text-white">
-        <div className="max-w-md">
-          <h2 className="text-3xl font-bold mb-6">Discover Antlia 4.0</h2>
-          <p className="text-lg mb-8 opacity-90">
-            Transform your supply chain with our advanced platform
-          </p>
-          <div className="space-y-4">
-            {discoverPoints.map((point, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle2 className="h-5 w-5 text-primary-light flex-shrink-0 mt-0.5" />
-                <span className="text-sm">{point}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Card className="w-full max-w-md shadow-card">
+          <CardHeader>
+            <CardTitle className="text-3xl font-bold">Discover Antlia 4.0</CardTitle>
+            <p className="text-lg opacity-90">Transform your supply chain with our advanced platform</p>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {discoverPoints.map((point, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary-light flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-foreground/90">{point}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

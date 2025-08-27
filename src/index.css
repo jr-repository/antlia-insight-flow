@@ -120,3 +120,11 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Sidebar gradient override to ensure blue-to-purple gradient is visible */
+@layer base {
+  [data-sidebar="sidebar"] {
+    background-image: var(--gradient-primary);
+    background-color: transparent; /* fallback */
+  }
+}
