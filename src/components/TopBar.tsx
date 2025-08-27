@@ -18,12 +18,12 @@ const TopBar = () => {
   const warehouse = localStorage.getItem("selectedWarehouse") || "Main Warehouse";
 
   return (
-    <div className="h-16 bg-gradient-primary border-b border-white/10 flex items-center justify-between px-6">
+    <div className="h-16 bg-card border-b border-border flex items-center justify-between px-6 shadow-sm">
       <div className="flex items-center space-x-4">
-        <SidebarTrigger className="text-white hover:bg-white/10" />
+        <SidebarTrigger className="text-foreground hover:bg-accent" />
         <div className="hidden md:block">
-          <h1 className="text-white font-semibold text-lg">{company}</h1>
-          <p className="text-white/70 text-sm">{warehouse}</p>
+          <h1 className="text-foreground font-bold text-lg tracking-tight">{company}</h1>
+          <p className="text-muted-foreground text-sm font-medium">{warehouse}</p>
         </div>
       </div>
 
@@ -31,7 +31,7 @@ const TopBar = () => {
         {/* Language Selector */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+            <Button variant="ghost" size="sm" className="text-foreground hover:bg-accent font-medium">
               <Globe className="h-4 w-4 mr-2" />
               <span className="hidden sm:inline">EN</span>
             </Button>
@@ -46,7 +46,7 @@ const TopBar = () => {
         {/* Notifications */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10 relative">
+            <Button variant="ghost" size="sm" className="text-foreground hover:bg-accent relative">
               <Bell className="h-4 w-4" />
               {notifications > 0 && (
                 <Badge className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center bg-red-500 text-white text-xs">
@@ -82,7 +82,7 @@ const TopBar = () => {
         {/* Profile */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="sm" className="text-white hover:bg-white/10">
+            <Button variant="ghost" size="sm" className="text-foreground hover:bg-accent font-medium">
               <User className="h-4 w-4 mr-2" />
               <span className="hidden sm:inline">Admin</span>
             </Button>
